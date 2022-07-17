@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -106,17 +106,44 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmDialogue.Designer.vb">
+      <DependentUpon>frmDialogue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogue.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmMainMenu.Designer.vb">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCheckPrices.Designer.vb">
+      <DependentUpon>frmCheckPrices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckPrices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarginAdjuster.Designer.vb">
+      <DependentUpon>frmMarginAdjuster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarginAdjuster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceAdjuster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceAdjuster.Designer.vb">
+      <DependentUpon>frmPriceAdjuster.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models.vb" />
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -130,8 +157,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmDialogue.resx">
+      <DependentUpon>frmDialogue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckPrices.resx">
+      <DependentUpon>frmCheckPrices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarginAdjuster.resx">
+      <DependentUpon>frmMarginAdjuster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceAdjuster.resx">
+      <DependentUpon>frmPriceAdjuster.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -165,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App-json.ico" />
+    <None Include="Resources\cancel_24px.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
